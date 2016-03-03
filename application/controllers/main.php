@@ -32,25 +32,21 @@ class Main extends CI_Controller {
 	public function registerCandidate()
 	{
 		$this->load->model('model_contest');
-		$sql = "SELECT id FROM district WHERE name = ?"; 
-		$test = $this->db->query($sql, $this->input->post("district"));
+		$sql = "SELECT id FROM district WHERE name = ?";//to know district->id
 
-		var_dump($test);
-
-		//upload a file //LEARN
-		/*$data = array(
+		$data = array(
 			'firstname'		=>	$this->input->post("firstname"),
 			'lastname'		=>	$this->input->post("lastname"),
 			'dateofbirth'	=>	$this->input->post("dob"),
 			'isactive'		=>	$this->input->post("isactive"),
-			'districtid'	=>	$this->input->post("district")1,
+			'districtid'	=>	$this->db->query($sql, $this->input->post("district"))->result(),
 			'gender'		=>	$this->input->post("gender"),
 			'photourl'		=>	$this->input->post("photourl"),
 			'address'		=>	$this->input->post("address")
 			);
 
 		$this->model_contest->insert_contestant($data);
-*/
+
 
 	}
 
