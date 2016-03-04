@@ -15,18 +15,26 @@
 			<th colspan="2">Options</th>
 		</tr>
 		<?php foreach($records as $row): ?>
-		<tr>
-			<td><?php echo $row->firstname.$row->lastname; ?></td>
-			<td><?php echo $row->dateofbirth; ?></td>
-			<td><?php echo $row->districtid; ?></td>
-			<td><?php echo $row->gender; ?></td>
-			<td><?php echo $row->address; ?></td>
-			<td><?php echo anchor('main/editContestant/$row->id',"Edit"); ?></td>
-			<td><?php echo anchor('main/deleteContestant/$row->id',"Delete"); ?></td>
-		</tr>
-	<?php endforeach; ?>
+			<tr> 
+				<td><?php echo $row->firstname." ".$row->lastname; ?></td>
+				<td><?php echo $row->dateofbirth; ?></td>
+				<td>
+					<?php 
+					foreach ($district as $dist):
+						if($row->districtid == $dist->id){ echo $dist->name; } 
+					endforeach;
+					?>
+				</td>
+				<td><?php echo $row->gender; ?></td>
+				<td><?php echo $row->address; ?></td>				
+				<td><?php echo anchor("main/editContestant/$row->id","Edit"); ?></td>
+				<td><?php echo anchor("main/deleteContestant/$row->id","Delete"); ?></td>
+			</tr>
+		<?php endforeach; ?>
 	</table>
+	<?php echo date("Y-m-d"); ?>
 	<?php echo anchor('main/addContestant',"Add"); ?>
+	<?php echo anchor('main',"Back"); ?>
 
 </body>
 </html>

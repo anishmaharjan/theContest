@@ -73,7 +73,7 @@
 	<div id="body">
 		<p>
 			<a href="<?php echo base_url('main/contestant'); ?>">Contestants</a>
-			<a href="<?php ?>">Contestants Ratings</a>
+			<a href="<?php echo base_url('rating'); ?>">Contestants Ratings</a>
 			<a href="<?php ?>">Photo Gallery</a>
 			<a href="<?php ?>">Graph</a>
 
