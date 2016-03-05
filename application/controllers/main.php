@@ -10,7 +10,7 @@ class Main extends CI_Controller {
 		$config = array(
 			'upload_path'	=>	'./assets/images/',
 			'allowed_types'	=>	'gif|jpg|png',
-			'max_size'		=>	1050,
+			'max_size'		=>	2050,
 			'max_width'		=>	1920,
 			'max_height'	=>	1080
 			);

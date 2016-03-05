@@ -2,13 +2,17 @@
 <html>
 <head>
 	<title>Editing Contestant	</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/scripts/css/bootstrap.min.css'); ?>">
+
 </head>
 <body>
-	<h1>Edit Contestant</h1>
-	<?php echo $this->upload->display_errors('<div class="alert">','</div>'); ?>
-	<?php echo form_open_multipart('main/editCandidate'); ?>
-	
-		<table border="1">
+	<div class="container">
+
+		<h1>Edit Contestant</h1>
+		<?php echo $this->upload->display_errors('<div class="alert">','</div>'); ?>
+		<?php echo form_open_multipart('main/editCandidate'); ?>
+
+		<table border="1" class='table table-bordered'>
 			<tr>
 				<td>First Name:</td>
 				<td><input type="text" name="firstname"  value="<?php echo $user->firstname; ?>" /></td>
@@ -58,10 +62,12 @@
 			</tr>
 		</table>
 		<input type="hidden" name="c_id" value="<?php echo $user->id; ?>" />
-		<input type="submit" value="Save" />
-		<a href="<?php echo base_url('main/contestant'); ?>">Cancel</a>
+		<input type="submit" value="Save" class="btn btn-default" />
+
+		<a href="<?php echo base_url('main/contestant'); ?>" class="btn btn-default" >Cancel</a>
 		<!-- <input type="reset" value="Cancel" /> -->
 	</form>
+</div>
 
 </body>
 </html>
