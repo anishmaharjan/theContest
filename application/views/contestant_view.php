@@ -13,6 +13,7 @@
 			<th>Gender</th>
 			<th>Address</th>
 			<th colspan="2">Options</th>
+			<th>Pic Thumb</th>
 		</tr>
 		<?php foreach($records as $row): ?>
 			<tr> 
@@ -29,6 +30,7 @@
 				<td><?php echo $row->address; ?></td>				
 				<td><?php echo anchor("main/editContestant/$row->id","Edit"); ?></td>
 				<td><?php echo anchor("main/deleteContestant/$row->id","Delete"); ?></td>
+				<td><img src="<?php echo $row->photourl; ?>" height="50"></td>
 			</tr>
 		<?php endforeach; ?>
 	</table>

@@ -38,6 +38,7 @@ class Model_contest extends CI_Model{
 	public function deleteContestant(){
 		$this->db->where('id',$this->uri->segment(3));
 		$this->db->delete('contestant');
+		$this->db->where('contestantid',$this->uri->segment(3));
 		$this->db->delete('contestantrating');
 	}
 

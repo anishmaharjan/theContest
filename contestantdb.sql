@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2016 at 06:21 AM
+-- Generation Time: Mar 05, 2016 at 05:22 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -34,18 +34,10 @@ CREATE TABLE IF NOT EXISTS `contestant` (
   `isactive` bit(1) NOT NULL,
   `districtid` int(11) NOT NULL,
   `gender` varchar(20) NOT NULL,
-  `photourl` varchar(50) NOT NULL,
+  `photourl` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
-
---
--- Dumping data for table `contestant`
---
-
-INSERT INTO `contestant` (`id`, `firstname`, `lastname`, `dateofbirth`, `isactive`, `districtid`, `gender`, `photourl`, `address`) VALUES
-(10, 'rat', 'rat', '1923-03-04', b'1', 1, 'male', '', 'asdf'),
-(12, 'Nice', 'Mat', '2015-06-25', b'1', 2, 'male', '', 'asdf');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 -- --------------------------------------------------------
 
@@ -59,15 +51,7 @@ CREATE TABLE IF NOT EXISTS `contestantrating` (
   `rating` int(11) NOT NULL,
   `rateddate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `contestantrating`
---
-
-INSERT INTO `contestantrating` (`id`, `contestantid`, `rating`, `rateddate`) VALUES
-(2, 10, 4, '2016-03-04 00:00:00'),
-(3, 12, 0, '2016-03-04 00:00:00');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 -- --------------------------------------------------------
 

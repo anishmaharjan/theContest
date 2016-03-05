@@ -5,8 +5,9 @@
 </head>
 <body>
 	<h1>Edit Contestant</h1>
-	<form action="<?php echo base_url('main/editCandidate');?>" method="POST" >
-
+	<?php echo $this->upload->display_errors('<div class="alert">','</div>'); ?>
+	<?php echo form_open_multipart('main/editCandidate'); ?>
+	
 		<table border="1">
 			<tr>
 				<td>First Name:</td>
