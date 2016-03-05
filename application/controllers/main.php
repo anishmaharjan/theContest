@@ -16,6 +16,7 @@ class Main extends CI_Controller {
 		$this->load->view('menu_view');
 	}
 
+//Contestant
 	public function contestant()
 	{
 		//$this->load->model('model_contest');
@@ -53,7 +54,7 @@ class Main extends CI_Controller {
 
 		endforeach;
 
-		var_dump($data['dateofbirth']);
+		//var_dump($data['dateofbirth']);
 
 		$this->model_contest->insert_contestant($data);
 
